@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const Navigation = () => {
   const getLinkClass = ({ isActive }: { isActive: boolean }): string =>
-    `link ${isActive ? "text-secondary" : "text-white"}`;
+    `link ${isActive ? "text-secondary" : "text-white text-decoration-none"}`;
 
   return (
     <nav className="w-100 flex-shrink-0 bg-primary p-4 navigation">

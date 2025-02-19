@@ -60,10 +60,11 @@ export const Styleguide = () => {
           type="checkbox"
           value={value}
           onChange={handleChange}
+          className="d-block"
         >
           <ToggleButton
             id="tbg-btn-1"
-            className="btn-selection"
+            className="btn-selection me-2 mb-2"
             variant="toggle-checkbox"
             value={1}
             bsPrefix="btn-check btn-selection"
@@ -72,7 +73,7 @@ export const Styleguide = () => {
           </ToggleButton>
           <ToggleButton
             id="tbg-btn-2"
-            className="btn-selection"
+            className="btn-selection me-2 mb-2"
             variant="toggle-checkbox"
             bsPrefix="btn-check btn-selection"
             value={2}
@@ -81,12 +82,21 @@ export const Styleguide = () => {
           </ToggleButton>
           <ToggleButton
             id="tbg-btn-3"
-            className="btn-selection"
+            className="btn-selection me-2 mb-2"
             variant="toggle-checkbox"
             bsPrefix="btn-check btn-selection"
             value={3}
           >
             Option 3
+          </ToggleButton>
+          <ToggleButton
+            id="tbg-btn-4"
+            className="btn-selection me-2 mb-2"
+            variant="toggle-checkbox"
+            bsPrefix="btn-check btn-selection"
+            value={4}
+          >
+            Option 4
           </ToggleButton>
         </ToggleButtonGroup>
       </Stack>

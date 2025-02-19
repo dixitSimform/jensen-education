@@ -2,8 +2,32 @@
 // Button
 //
 
+%toggle-checkbox-state {
+    color: $primary;
+    background-color: $white;
+    box-shadow: 0px 1px 3px rgba($black, 0.1), 0px 1px 2px -1px rgba($black, 0.1);
+}
+
 .btn-toggle-checkbox {
-    padding: $btn-padding-y-lg;
+    padding: $spacer * 0.5 $spacer * 1.5;
     font-size: $font-size-xs;
     font-weight: $font-weight-normal;
+    background-color: rgba($je-gray-400, 0.05);
+    border: none;
+
+    @at-root .btn-group>.btn:not(:last-child):not(.dropdown-toggle), .btn-group>.btn:nth-child(n+3) {
+        border-radius: $border-radius-xxl;
+    }
+
+    &:hover {
+        @extend %toggle-checkbox-state;
+    }
+
+    @at-root .btn-check:checked+.btn {
+        @extend %toggle-checkbox-state;
+    }
+
+    @at-root .btn-check+.btn:hover {
+        @extend %toggle-checkbox-state;
+    }
 }
