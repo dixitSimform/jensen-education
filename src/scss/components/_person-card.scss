@@ -1,0 +1,20 @@
+.person-card {
+  display: grid;
+  grid-template-columns: 107px 1fr;
+  &__image {
+    aspect-ratio: 107 / 140;
+    object-fit: cover;
+  }
+  &__content {
+    padding: 24px;
+    background-color: $white;
+    .badge.rounded-pill.bg-primary {
+      color: $je-primary;
+      background-color: $je-body-bg !important;
+      padding: 10px 16px;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 400;
+    }
+  }
+}

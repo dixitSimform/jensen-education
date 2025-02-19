@@ -4,7 +4,7 @@
 
 html {
   -ms-overflow-style: -ms-autohiding-scrollbar;
-	-ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -12,7 +12,7 @@ html {
 
 body {
   -moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
 }
 
@@ -31,9 +31,23 @@ figure {
   margin: 0;
 }
 
-[role="button"]:-webkit-direct-focus,
+[role='button']:-webkit-direct-focus,
 a:-webkit-any-link:focus-visible {
   outline: none;
   outline-width: 0;
   outline-style: none;
+}
+
+.svgicon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
