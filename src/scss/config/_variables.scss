@@ -123,6 +123,20 @@ $btn-font-size: 0.875rem;
 $btn-font-weight: 500;
 // scss-docs-end btn-variables
 
+// scss-docs-start card-variables
+$card-border-color: transparent;
+$card-border-radius: 2px;
+$card-spacer-x: 24px;
+$card-spacer-y: 24px;
+$card-bg: $white;
+// scss-docs-end card-variables
+
+// scss-docs-start breadcrumbs-variables
+$breadcrumb-font-size: 14px;
+$breadcrumb-divider: '>';
+$breadcrumb-divider-color: $je-breadcrumb-divider;
+// scss-docs-end breadcrumbs-variables
+
 // scss-docs-start border-variables
 $border-width: 1px;
 $border-color: $je-gray-100;

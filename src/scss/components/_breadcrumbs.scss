@@ -1,12 +1,9 @@
 .breadcrumb-item {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
   a {
     text-decoration: none;
   }
   span {
-    padding: 4px 8px;
     border-radius: 6px;
   }
   &.active {
@@ -14,9 +11,5 @@
     span {
       background-color: $je-breadcrumb-active;
     }
-  }
-  & + .breadcrumb-item::before {
-    --je-breadcrumb-divider: '>';
-    color: $je-breadcrumb-divider;
   }
 }

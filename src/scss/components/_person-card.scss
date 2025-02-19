@@ -1,13 +1,10 @@
 .person-card {
-  display: grid;
-  grid-template-columns: 107px 1fr;
+  flex-direction: row;
   &__image {
     aspect-ratio: 107 / 140;
     object-fit: cover;
   }
   &__content {
-    padding: 24px;
-    background-color: $white;
     .badge.rounded-pill.bg-primary {
       color: $je-primary;
       background-color: $je-body-bg !important;
