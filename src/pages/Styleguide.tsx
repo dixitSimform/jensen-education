@@ -1,8 +1,18 @@
-import { Button, Dropdown, Stack } from "react-bootstrap";
+import {
+  Button,
+  Dropdown,
+  Stack,
+  ToggleButton,
+  ToggleButtonGroup,
+} from "react-bootstrap";
 import { Header } from "../components/Header";
 import { ChevronDown } from "../icons/ChevronDown";
+import { useState } from "react";
 
 export const Styleguide = () => {
+  const [value, setValue] = useState([]);
+  const handleChange = (val) => setValue(val);
+
   return (
     <>
       <Header title="Styleguide" />
@@ -46,6 +56,39 @@ export const Styleguide = () => {
           </Dropdown.Menu>
         </Dropdown>
         {/* <Pagination>{items}</Pagination> */}
+        <ToggleButtonGroup
+          type="checkbox"
+          value={value}
+          onChange={handleChange}
+        >
+          <ToggleButton
+            id="tbg-btn-1"
+            className="btn-selection"
+            variant="toggle-checkbox"
+            value={1}
+            bsPrefix="btn-check btn-selection"
+          >
+            Option 1
+          </ToggleButton>
+          <ToggleButton
+            id="tbg-btn-2"
+            className="btn-selection"
+            variant="toggle-checkbox"
+            bsPrefix="btn-check btn-selection"
+            value={2}
+          >
+            Option 2
+          </ToggleButton>
+          <ToggleButton
+            id="tbg-btn-3"
+            className="btn-selection"
+            variant="toggle-checkbox"
+            bsPrefix="btn-check btn-selection"
+            value={3}
+          >
+            Option 3
+          </ToggleButton>
+        </ToggleButtonGroup>
       </Stack>
     </>
   );

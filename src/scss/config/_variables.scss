@@ -3,9 +3,12 @@ $je-primary: #092435;
 $je-secondary: #c19c5c;
 $je-body-bg: #f6f5f1;
 $je-gray-100: #aaaaaa;
-$je-font-inter: 'Inter', serif;
-$je-font-tiempos-headline: 'Tiempos Headline';
-$je-font-tiempos-text: 'Tiempos Text';
+$je-gray-200: #E9EAEC;
+$je-gray-300: #A0AEC0;
+$je-font-inter: "Inter", serif;
+$je-font-tiempos-fine: "Tiempos Fine";
+$je-font-tiempos-headline: "Tiempos Headline";
+$je-font-tiempos-text: "Tiempos Text";
 $je-font-body: $je-font-inter;
 $je-letter-spacing-3: 3px;
 $je-breadcrumb-active: #ebeae6;
@@ -105,7 +108,11 @@ $prefix: $variable-prefix;
 
 // Fonts, line-height, headings
 $font-family-sans-serif: $je-font-body;
+$font-size-root: null;
 $font-size-base: 1rem;
+$font-size-xs: $font-size-base * .75;
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
 
 $h1-font-size: $font-size-base * 7;
 $h2-font-size: $font-size-base * 4;
@@ -145,6 +152,16 @@ $border-color: $je-gray-100;
 // scss-docs-start border-radius-variables
 $border-radius: 0.125rem;
 // scss-docs-end border-radius-variables
+
+$input-border-radius: var(--#{$prefix}border-radius);
+$input-border-radius-sm: var(--#{$prefix}border-radius-sm);
+$input-border-radius-lg: $border-radius;
+$input-font-size-lg: 1rem;
+$input-padding-y-lg: 1rem;
+$input-padding-x-lg: 1.25rem;
+$input-bg: $white;
+$input-border-color: $je-gray-200;
+$input-placeholder-color: $je-gray-300;
 
 // Utilities
 $utilities: ();
