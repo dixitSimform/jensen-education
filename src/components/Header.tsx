@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export const Header = ({ title }: HeaderProps) => {
   return (
-    <header className="px-4 py-4 border-bottom">
+    <header className="px-4 py-4 border-bottom mb-3">
       <Stack gap={2} direction="horizontal" className="py-1">
         <h1 className="h4 text-uppercase mb-0 me-auto">{title}</h1>
         <Dropdown>

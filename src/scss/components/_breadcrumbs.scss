@@ -1,15 +1,21 @@
-.breadcrumb-item {
-  font-weight: 500;
-  a {
-    text-decoration: none;
-  }
-  span {
-    border-radius: 6px;
-  }
-  &.active {
-    font-weight: 600;
-    span {
-      background-color: $je-breadcrumb-active;
+//
+// Breadcrumbs
+//
+
+.breadcrumb {
+    &-item {
+        a {
+            color: $je-gray-700;
+            text-decoration: none;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+        &.active {
+            span {
+                background-color: $je-breadcrumb-active;
+            }
+        }
     }
-  }
 }

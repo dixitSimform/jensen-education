@@ -1,19 +1,22 @@
 import { Breadcrumb } from "react-bootstrap";
-import { Home } from "./Icons";
+import { Home } from "../icons/Home";
 
 export const Breadcrumbs = () => {
   return (
-    <Breadcrumb className="my-3">
-      <Breadcrumb.Item href="#">
-        <span className="py-1 px-2">
-          <Home className="fs-6" />
-        </span>
+    <Breadcrumb
+      className="mb-3"
+      bsPrefix="breadcrumb align-items-center fw-medium"
+    >
+      <Breadcrumb.Item href="#" className="p-1 lh-1">
+        <Home />
       </Breadcrumb.Item>
       <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-        <span className="py-1 px-2">Persons</span>
+        Persons
       </Breadcrumb.Item>
       <Breadcrumb.Item active>
-        <span className="py-1 px-2">Search “John Smith”</span>
+        <span className="py-1 px-2 fw-semibold rounded-1">
+          Search “John Smith”
+        </span>
       </Breadcrumb.Item>
     </Breadcrumb>
   );
