@@ -1,0 +1,171 @@
+// Je Theme Styleguide
+$je-primary: #092435;
+$je-secondary: #c19c5c;
+$je-body-bg: #f6f5f1;
+$je-gray-100: #aaaaaa;
+$je-font-inter: "Inter", serif;
+$je-font-tiempos-headline: "Tiempos Headline";
+$je-font-tiempos-text: "Tiempos Text";
+$je-font-body: $je-font-inter;
+$je-letter-spacing-3: 3px;
+
+// Bootstrap default overrides
+
+// scss-docs-start gray-color-variables
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+);
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: tomato;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "black": $black,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800,
+);
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+$primary: $je-primary;
+$secondary: $je-secondary;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+// scss-docs-end theme-colors-map
+
+// Prefix for :root CSS variables
+$variable-prefix: je-; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix: $variable-prefix;
+
+// Fonts, line-height, headings
+$font-family-sans-serif: $je-font-body;
+$font-size-base: 1rem;
+
+$h1-font-size: $font-size-base * 7;
+$h2-font-size: $font-size-base * 4;
+$h3-font-size: $font-size-base * 2.875;
+$h4-font-size: $font-size-base * 2;
+$h5-font-size: $font-size-base * 1.5;
+$h6-font-size: $font-size-base;
+
+// Settings for the `<body>` element.
+$body-color: $je-primary;
+$body-bg: $je-body-bg;
+
+// scss-docs-start btn-variables
+$btn-font-size: 0.875rem;
+$btn-font-weight: 500;
+// scss-docs-end btn-variables
+
+// scss-docs-start border-variables
+$border-width: 1px;
+$border-color: $je-gray-100;
+// scss-docs-end border-variables
+
+// scss-docs-start border-radius-variables
+$border-radius: 0.125rem;
+// scss-docs-end border-radius-variables
+
+// Utilities
+$utilities: ();
+
+$utilities: map-merge(
+  (
+    "letter-spacing": (
+      property: letter-spacing,
+      class: ls,
+      values: (
+        3: $je-letter-spacing-3,
+      ),
+    ),
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        32px: 32px,
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+      ),
+    ),
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        32px: 32px,
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+      ),
+    ),
+  ),
+  $utilities
+);

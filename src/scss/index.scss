@@ -1,0 +1,12 @@
+// Base
+@import 'config/base';
+
+// Theme setup & bootstrap overrides
+@import 'config/fonts';
+@import 'config/variables';
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Theme components
+@import 'components/type';
+@import 'components/navigation';

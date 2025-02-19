@@ -1,0 +1,39 @@
+//
+// Base
+//
+
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+	-ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+[role="button"]:-webkit-direct-focus,
+a:-webkit-any-link:focus-visible {
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+}

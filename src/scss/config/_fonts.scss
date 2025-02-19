@@ -1,0 +1,25 @@
+//
+// Fonts
+//
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap');
+
+// External Fonts
+@font-face {
+    font-family: 'Tiempos Headline';
+    src: url('../fonts/TiemposHeadline-Semibold.woff2') format('woff2'),
+        url('../fonts/TiemposHeadline-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../fonts/TiemposText-Regular.woff2') format('woff2'),
+        url('../fonts/TiemposText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
