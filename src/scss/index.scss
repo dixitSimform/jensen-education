@@ -8,5 +8,10 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 // Theme components
+@import 'components/breadcrumbs';
 @import 'components/type';
 @import 'components/navigation';
+@import 'components/person-card';
+
+// Pages
+@import 'pages/persons';

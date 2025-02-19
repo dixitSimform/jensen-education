@@ -3,11 +3,13 @@ $je-primary: #092435;
 $je-secondary: #c19c5c;
 $je-body-bg: #f6f5f1;
 $je-gray-100: #aaaaaa;
-$je-font-inter: "Inter", serif;
-$je-font-tiempos-headline: "Tiempos Headline";
-$je-font-tiempos-text: "Tiempos Text";
+$je-font-inter: 'Inter', serif;
+$je-font-tiempos-headline: 'Tiempos Headline';
+$je-font-tiempos-text: 'Tiempos Text';
 $je-font-body: $je-font-inter;
 $je-letter-spacing-3: 3px;
+$je-breadcrumb-active: #ebeae6;
+$je-breadcrumb-divider: #d0d5dd;
 
 // Bootstrap default overrides
 
@@ -28,15 +30,15 @@ $black: #000;
 // fusv-disable
 // scss-docs-start gray-colors-map
 $grays: (
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900,
+  '100': $gray-100,
+  '200': $gray-200,
+  '300': $gray-300,
+  '400': $gray-400,
+  '500': $gray-500,
+  '600': $gray-600,
+  '700': $gray-700,
+  '800': $gray-800,
+  '900': $gray-900,
 );
 // scss-docs-end gray-colors-map
 // fusv-enable
@@ -56,20 +58,20 @@ $cyan: #0dcaf0;
 
 // scss-docs-start colors-map
 $colors: (
-  "blue": $blue,
-  "indigo": $indigo,
-  "purple": $purple,
-  "pink": $pink,
-  "red": $red,
-  "orange": $orange,
-  "yellow": $yellow,
-  "green": $green,
-  "teal": $teal,
-  "cyan": $cyan,
-  "black": $black,
-  "white": $white,
-  "gray": $gray-600,
-  "gray-dark": $gray-800,
+  'blue': $blue,
+  'indigo': $indigo,
+  'purple': $purple,
+  'pink': $pink,
+  'red': $red,
+  'orange': $orange,
+  'yellow': $yellow,
+  'green': $green,
+  'teal': $teal,
+  'cyan': $cyan,
+  'black': $black,
+  'white': $white,
+  'gray': $gray-600,
+  'gray-dark': $gray-800,
 );
 // scss-docs-end colors-map
 
@@ -86,14 +88,14 @@ $dark: $gray-900;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark,
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark,
 );
 // scss-docs-end theme-colors-map
 
@@ -121,6 +123,20 @@ $btn-font-size: 0.875rem;
 $btn-font-weight: 500;
 // scss-docs-end btn-variables
 
+// scss-docs-start card-variables
+$card-border-color: transparent;
+$card-border-radius: 2px;
+$card-spacer-x: 24px;
+$card-spacer-y: 24px;
+$card-bg: $white;
+// scss-docs-end card-variables
+
+// scss-docs-start breadcrumbs-variables
+$breadcrumb-font-size: 14px;
+$breadcrumb-divider: '>';
+$breadcrumb-divider-color: $je-breadcrumb-divider;
+// scss-docs-end breadcrumbs-variables
+
 // scss-docs-start border-variables
 $border-width: 1px;
 $border-color: $je-gray-100;
@@ -135,14 +151,14 @@ $utilities: ();
 
 $utilities: map-merge(
   (
-    "letter-spacing": (
+    'letter-spacing': (
       property: letter-spacing,
       class: ls,
       values: (
         3: $je-letter-spacing-3,
       ),
     ),
-    "width": (
+    'width': (
       property: width,
       class: w,
       values: (
@@ -154,7 +170,7 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
-    "height": (
+    'height': (
       property: height,
       class: h,
       values: (

@@ -1,0 +1,15 @@
+.breadcrumb-item {
+  font-weight: 500;
+  a {
+    text-decoration: none;
+  }
+  span {
+    border-radius: 6px;
+  }
+  &.active {
+    font-weight: 600;
+    span {
+      background-color: $je-breadcrumb-active;
+    }
+  }
+}
