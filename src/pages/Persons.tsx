@@ -17,7 +17,7 @@ export const Persons = () => {
     setFilter,
     handleSearchChange,
     usersToShow,
-    handleSelect
+    handleSelect,
   } = usePagination();
   return (
     <>
@@ -32,7 +32,7 @@ export const Persons = () => {
                 return (
                   <PersonCard
                     key={person.email}
-                    image={"/images/4.avif"}
+                    image={"/images/person.jpg"}
                     name={person.firstName + " " + person.lastName}
                     number={person.phone}
                     email={person.email}
