@@ -1,7 +1,7 @@
-import { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Filters, Record } from '../types/person';  // Import Record type
 
-const useFilters = (data: Record[]) => {
+const useFilters = (data: Record[],setLoading: React.Dispatch<React.SetStateAction<boolean>>) => {
   const [filters, setFilters] = useState<Filters>({
     role: [],
     unit: [],
@@ -22,13 +22,14 @@ const useFilters = (data: Record[]) => {
 
   // Apply filters and search to data
   const filteredData = useMemo(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
     return data.filter((item) => {
-      // Check if item matches search term (across all fields)
       const matchesSearch = Object.values(item).some((value) =>
         value.toString().toLowerCase().includes(debouncedSearchTerm.toLowerCase())
       );
-
-      // Check if item matches the filters (multiple values in filters)
       const matchesFilters =
         (filters.role.length === 0 || filters.role.includes(item.role)) &&
         (filters.unit.length === 0 || filters.unit.includes(item.unit)) &&
@@ -40,6 +41,8 @@ const useFilters = (data: Record[]) => {
   }, [data, filters, debouncedSearchTerm]);
 
   const setFilter = (filterName: string, selectedValues: string[]) => {
+
+
     setFilters((prevFilters) => ({
       ...prevFilters,
       [filterName]: selectedValues,

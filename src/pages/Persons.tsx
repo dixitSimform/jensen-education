@@ -39,7 +39,7 @@ export const Persons = () => {
             <Breadcrumbs items={breadCrumb} />
             <Searchbar onSearch={handleSearchChange} />
             <Stack gap={2}>
-              {
+              {!loading &&
                 currentPageData.map((person) => {
                   return (
                     <PersonCard
@@ -60,23 +60,27 @@ export const Persons = () => {
               )}
             </Stack>
             <Stack className="my-3 gap-3 border-top border-light-subtle pt-3 flex-md-row align-items-center justify-content-between">
-              {currentPageData.length !== 0 && <Dropdown onSelect={handleSelect}>
-                <Dropdown.Toggle bsPrefix="none" variant="outline-primary">
-                  Show {usersToShow} users
-                  <ChevronDown className="ms-3" />
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item eventKey="5">5 users</Dropdown.Item>
-                  <Dropdown.Item eventKey="10">10 users</Dropdown.Item>
-                  <Dropdown.Item eventKey="15">15 users</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>}
+              {currentPageData.length !== 0 && (
+                <Dropdown onSelect={handleSelect}>
+                  <Dropdown.Toggle bsPrefix="none" variant="outline-primary">
+                    Show {usersToShow} users
+                    <ChevronDown className="ms-3" />
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item eventKey="5">5 users</Dropdown.Item>
+                    <Dropdown.Item eventKey="10">10 users</Dropdown.Item>
+                    <Dropdown.Item eventKey="15">15 users</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              )}
 
-              {currentPageData.length !== 0 &&<PageNumbers
-                currentPage={currentPage}
-                pageCount={pageCount}
-                handlePageChange={handlePageChange}
-              />}
+              {currentPageData.length !== 0 && (
+                <PageNumbers
+                  currentPage={currentPage}
+                  pageCount={pageCount}
+                  handlePageChange={handlePageChange}
+                />
+              )}
             </Stack>
           </Col>
         </Row>
