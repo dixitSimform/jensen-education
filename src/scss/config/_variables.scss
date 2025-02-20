@@ -1,4 +1,4 @@
-// Je Theme Styleguide
+// Jensen Theme Styleguide
 $je-primary: #092435;
 $je-secondary: #c19c5c;
 $je-body-bg: #f6f5f1;
@@ -109,6 +109,18 @@ $theme-colors: (
 $variable-prefix: je-; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix: $variable-prefix;
 
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+// scss-docs-end spacer-variables-maps
+
 // Fonts, line-height, headings
 $font-family-sans-serif: $je-font-body;
 $font-size-root: null;
@@ -129,15 +141,16 @@ $body-color: $je-primary;
 $body-bg: $je-body-bg;
 
 // scss-docs-start btn-variables
-$btn-font-size: 0.875rem;
+$btn-font-size: $font-size-sm;
 $btn-font-weight: 500;
+$btn-padding-y: $spacer * .5;
 // scss-docs-end btn-variables
 
 // scss-docs-start card-variables
 $card-border-width: 0;
-$card-border-radius: 2px;
-$card-spacer-x: 24px;
-$card-spacer-y: 24px;
+$card-border-radius: $spacer * 0.125;;
+// $card-spacer-x: 24px;
+// $card-spacer-y: 24px;
 $card-bg: $white;
 $card-box-shadow: 0px 1px 3px rgba($black, 0.1), 0px 1px 2px -1px rgba($black, 0.1);
 
@@ -156,9 +169,9 @@ $border-radius: 0.125rem;
 $input-border-radius: var(--#{$prefix}border-radius);
 $input-border-radius-sm: var(--#{$prefix}border-radius-sm);
 $input-border-radius-lg: $border-radius;
-$input-font-size-lg: 1rem;
-$input-padding-y-lg: 1rem;
-$input-padding-x-lg: 1.25rem;
+$input-font-size-lg: $spacer;
+$input-padding-y-lg: $spacer;
+$input-padding-x-lg: $spacer * 1.25;
 $input-bg: $white;
 $input-border-color: $je-gray-200;
 $input-placeholder-color: $je-gray-300;
@@ -166,7 +179,7 @@ $input-placeholder-color: $je-gray-300;
 
 // scss-docs-start breadcrumb-variables
 $breadcrumb-font-size: $font-size-sm;
-$breadcrumb-item-padding-x: 0.75rem;
+$breadcrumb-item-padding-x: $spacer * 0.875;
 $breadcrumb-divider-color: $je-gray-500;
 $breadcrumb-active-color: $je-gray-600;
 $breadcrumb-divider: quote(">");
@@ -174,12 +187,13 @@ $breadcrumb-divider-flipped: $breadcrumb-divider;
 // scss-docs-end breadcrumb-variables
 
 // scss-docs-start pagination-variables
-$pagination-padding-x: 0.875rem;
+$pagination-padding-y: $spacer * .5;
+$pagination-padding-x: $spacer;
 $pagination-font-size: $font-size-sm;
 
 $pagination-color: $je-gray-700;
 $pagination-border-color: rgba($black, 0);
-$pagination-margin-start: 0.125rem;
+$pagination-margin-start: $spacer * 0.125;
 
 $pagination-focus-color: $primary;
 $pagination-focus-bg: rgba($black, 0);
@@ -193,7 +207,16 @@ $pagination-hover-border-color: $primary;
 $pagination-active-color: $primary;
 $pagination-active-bg: rgba($black, 0);
 $pagination-active-border-color: $primary;
+
+$pagination-disabled-color: $je-gray-300;
+$pagination-disabled-bg: none;
+$pagination-disabled-border-color: $je-gray-200;
 // scss-docs-end pagination-variables
+
+// scss-docs-start dropdown-variables
+$dropdown-font-size: $font-size-sm;
+$dropdown-link-hover-bg: $white;
+// scss-docs-end dropdown-variables
 
 // Utilities
 $utilities: ();
@@ -246,6 +269,7 @@ $utilities: map-merge(
         null: var(--#{$prefix}box-shadow),
         sm: var(--#{$prefix}box-shadow-sm),
         lg: var(--#{$prefix}box-shadow-lg),
+        card: $card-box-shadow,
         none: none,
       )
     ),
