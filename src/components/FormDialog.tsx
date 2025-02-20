@@ -1,22 +1,25 @@
+// Dialog.tsx
 import { Button, Modal, Stack } from "react-bootstrap";
 import { ArrowRight } from "../icons/ArrowRight";
 
 interface DialogProps {
-  size?: string;
+  size?: "sm" | "lg" | "xl";
   isOpen: boolean;
   onClose: () => void;
   title?: string;
   buttonText?: string;
   children?: React.ReactNode;
+  onSubmit: () => void; // Added onSubmit function as a prop
 }
 
-export const Dialog = ({
+export const FormDialog = ({
   size = "lg",
   isOpen,
   onClose,
   title,
   buttonText,
   children,
+  onSubmit, // Destructure the onSubmit function
 }: DialogProps) => {
   return (
     <Modal show={isOpen} onHide={onClose} size={size} contentClassName="p-lg-5">
@@ -30,7 +33,7 @@ export const Dialog = ({
             variant="secondary"
             className="w-100 m-0 text-uppercase fw-bold ls-3 text-white d-flex align-items-center justify-content-center gap-2"
             size="lg"
-            onClick={onClose}
+            onClick={onSubmit} // Call the onSubmit function when the button is clicked
           >
             {buttonText}
             <ArrowRight />
