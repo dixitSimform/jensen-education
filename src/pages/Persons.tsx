@@ -41,7 +41,7 @@ export const Persons = () => {
                   return (
                     <PersonCard
                       key={person.email}
-                      image={"/images/person.jpg"}
+                      image={person.image}
                       name={person.firstName + " " + person.lastName}
                       number={person.phone}
                       email={person.email}

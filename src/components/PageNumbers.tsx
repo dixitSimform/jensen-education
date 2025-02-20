@@ -12,9 +12,8 @@ export const PageNumbers: React.FC<PageNumbersProps> = ({
   pageCount,
   handlePageChange,
 }) => {
-  // Logic to create the page numbers
   const pageNumbers = [];
-  const maxPagesToShow = 5; // You can adjust the number of pages to display
+  const maxPagesToShow = 3; // Adjust the number of pages to display
   const delta = Math.floor(maxPagesToShow / 2);
 
   // Generate page numbers considering the current page and total page count
@@ -36,6 +35,15 @@ export const PageNumbers: React.FC<PageNumbersProps> = ({
         disabled={currentPage <= 1}
       />
 
+      {/* Display ellipsis before the page numbers if previous pages exist */}
+      {currentPage - delta > 1 && pageNumbers[0] > 1 && (
+        <>
+         
+          <Pagination.Item onClick={() => handlePageChange(1)}>1</Pagination.Item>
+          <Pagination.Ellipsis />
+        </>
+      )}
+
       {/* Display page numbers dynamically */}
       {pageNumbers.map((pageNumber) => (
         <Pagination.Item
@@ -47,9 +55,12 @@ export const PageNumbers: React.FC<PageNumbersProps> = ({
         </Pagination.Item>
       ))}
 
-      {/* Ellipsis if there are more pages */}
-      {pageCount > maxPagesToShow && currentPage + delta < pageCount && (
-        <Pagination.Ellipsis />
+      {/* Display ellipsis after the page numbers if more pages exist */}
+      {currentPage + delta < pageCount && pageNumbers[pageNumbers.length - 1] < pageCount && (
+        <>
+          <Pagination.Ellipsis />
+          <Pagination.Item onClick={() => handlePageChange(pageCount)}>{pageCount}</Pagination.Item>
+        </>
       )}
 
       {/* Next Button */}

@@ -5,7 +5,7 @@ import usePagination from "./use-pagination";
 
 const usePaginationWithFilters = () => {
   const [usersToShow, setUsersToShow] = useState(5);
-  const { data, loading, totalItems } = useFetchData("/dummy.json"); // Fetch data
+  const { data, loading, totalItems } = useFetchData("/modified_dummy.json"); // Fetch data
   const { filteredData, filters, setFilter, handleSearchChange, searchTerm } =
     useFilters(data); // Apply filters and search
   const { currentPage, pageCount, currentPageData, handlePageChange } =
