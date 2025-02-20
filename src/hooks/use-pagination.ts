@@ -5,13 +5,15 @@ const usePagination = (filteredData: Record[], usersToShow: number) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const pageCount = Math.ceil(filteredData.length / usersToShow);
-
+  
+  // Memoize current page data for performance optimization
   const currentPageData = useMemo(() => {
     const startIndex = (currentPage - 1) * usersToShow;
     const endIndex = startIndex + usersToShow;
-    return filteredData.slice(startIndex, endIndex);
-  }, [currentPage, filteredData, usersToShow]);
+    const dataSlice = filteredData.slice(startIndex, endIndex);
 
+    return dataSlice;
+  }, [currentPage, filteredData, usersToShow]); // dependencies include all the values that trigger recomputation
   const handlePageChange = (page: number) => {
     if (page > 0 && page <= pageCount) {
       setCurrentPage(page);

@@ -39,7 +39,7 @@ export const Persons = () => {
             <Breadcrumbs items={breadCrumb} />
             <Searchbar onSearch={handleSearchChange} />
             <Stack gap={2}>
-              {!loading &&
+              {
                 currentPageData.map((person) => {
                   return (
                     <PersonCard
@@ -52,7 +52,7 @@ export const Persons = () => {
                     />
                   );
                 })}
-              {!loading && currentPageData.length === 0 && <NoData />}
+              {currentPageData.length === 0 && <NoData />}
               {loading && (
                 <div className="d-flex justify-content-center">
                   <Loader />
