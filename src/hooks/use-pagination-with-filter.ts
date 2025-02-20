@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useFetchData from "./use-fetch";
 import useFilters from "./use-filter";
 import usePagination from "./use-pagination";
@@ -11,6 +11,9 @@ const usePaginationWithFilters = () => {
   const { currentPage, pageCount, currentPageData, handlePageChange } =
     usePagination(filteredData, usersToShow); // Handle pagination
 
+  useEffect(() => {
+    handlePageChange(1); // Reset to page 1 when filters change
+  },[filters, searchTerm, usersToShow]);
   const handleSelect = (eventKey: string | null) => {
     if (eventKey) {
       const selectedValue = parseInt(eventKey, 10);
