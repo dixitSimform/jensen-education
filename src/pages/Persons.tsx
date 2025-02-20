@@ -52,7 +52,7 @@ export const Persons = () => {
                     />
                   );
                 })}
-              {currentPageData.length === 0 && <NoData />}
+              {!loading && currentPageData.length === 0 && <NoData />}
               {loading && (
                 <div className="d-flex justify-content-center">
                   <Loader />
