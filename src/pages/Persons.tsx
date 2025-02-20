@@ -30,8 +30,11 @@ export const Persons = () => {
   return (
     <>
       <Header title="Persons" />
-      <Stack className="px-4">
+      <Stack className="px-md-4 px-3">
         <Row>
+          <Col lg="3" xs="12" className="order-lg-1 mb-lg-0 mb-4">
+            <Filter onFilterChange={setFilter} />
+          </Col>
           <Col lg="9" xs="12">
             <Breadcrumbs items={breadCrumb} />
             <Searchbar onSearch={handleSearchChange} />
@@ -56,7 +59,7 @@ export const Persons = () => {
                 </div>
               )}
             </Stack>
-            <Stack className="my-3 border-top border-light-subtle pt-3 flex-md-row align-items-center justify-content-between">
+            <Stack className="my-3 gap-3 border-top border-light-subtle pt-3 flex-md-row align-items-center justify-content-between">
               <Dropdown onSelect={handleSelect}>
                 <Dropdown.Toggle bsPrefix="none" variant="outline-primary">
                   Show {usersToShow} users
@@ -75,9 +78,6 @@ export const Persons = () => {
                 handlePageChange={handlePageChange}
               />
             </Stack>
-          </Col>
-          <Col lg="3" xs="12">
-            <Filter onFilterChange={setFilter} />
           </Col>
         </Row>
       </Stack>
