@@ -1,26 +1,33 @@
-import { Badge, Card } from 'react-bootstrap'
+import { Badge, Card } from "react-bootstrap";
 
 type TPersonCard = {
-  image: string
-  name: string
-  number: string
-  email: string
-  department: string
-}
+  image: string;
+  name: string;
+  number: string;
+  email: string;
+  department: string;
+};
 
 export const PersonCard = (props: TPersonCard) => {
-  const { department, email, image, name, number } = props
+  const { department, email, image, name, number } = props;
   return (
-    <Card className='person-card'>
-      <Card.Img variant='left' src={image} alt={name} className='person-card__image' />
-      <Card.Body className='person-card__content d-flex flex-column justify-content-center gap-3'>
-        <h5 className='person-card__name mb-0'>{name}</h5>
-        <div className='person-card__meta d-flex gap-2 flex-wrap'>
+    <Card className="person-card flex-md-row">
+      <div className="person-card-image flex-shrink-0">
+        <Card.Img
+          variant="left"
+          src={image}
+          alt={name}
+          className="w-100 h-100 object-fit-cover"
+        />
+      </div>
+      <Card.Body className="person-card-content d-flex flex-column justify-content-center gap-3">
+        <h5 className="mb-0">{name}</h5>
+        <div className="d-flex gap-2 flex-wrap">
           <Badge pill>{number}</Badge>
           <Badge pill>{email}</Badge>
           <Badge pill>{department}</Badge>
         </div>
       </Card.Body>
     </Card>
-  )
-}
+  );
+};

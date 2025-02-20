@@ -8,6 +8,8 @@ import {
 import { Header } from "../components/Header";
 import { ChevronDown } from "../icons/ChevronDown";
 import { useState } from "react";
+import { Loader } from "../components/Loader";
+import { NoData } from "../components/NoData";
 
 export const Styleguide = () => {
   const [value, setValue] = useState([]);
@@ -99,6 +101,8 @@ export const Styleguide = () => {
             Option 4
           </ToggleButton>
         </ToggleButtonGroup>
+        <Loader />
+        <NoData />
       </Stack>
     </>
   );
