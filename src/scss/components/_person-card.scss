@@ -1,16 +1,10 @@
+//
+// Person Card
+//
+
 .person-card {
   &-image {
     width: 107px;
     height: 140px;
-  }
-  &-content {
-    .badge.rounded-pill.bg-primary {
-      color: $je-primary;
-      background-color: $je-body-bg !important;
-      padding: 10px 16px;
-      font-size: 12px;
-      line-height: 14px;
-      font-weight: 400;
-    }
   }
 }
