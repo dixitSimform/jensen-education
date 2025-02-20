@@ -60,7 +60,7 @@ export const Persons = () => {
               )}
             </Stack>
             <Stack className="my-3 gap-3 border-top border-light-subtle pt-3 flex-md-row align-items-center justify-content-between">
-              <Dropdown onSelect={handleSelect}>
+              {currentPageData.length !== 0 && <Dropdown onSelect={handleSelect}>
                 <Dropdown.Toggle bsPrefix="none" variant="outline-primary">
                   Show {usersToShow} users
                   <ChevronDown className="ms-3" />
@@ -70,13 +70,13 @@ export const Persons = () => {
                   <Dropdown.Item eventKey="10">10 users</Dropdown.Item>
                   <Dropdown.Item eventKey="15">15 users</Dropdown.Item>
                 </Dropdown.Menu>
-              </Dropdown>
+              </Dropdown>}
 
-              <PageNumbers
+              {currentPageData.length !== 0 &&<PageNumbers
                 currentPage={currentPage}
                 pageCount={pageCount}
                 handlePageChange={handlePageChange}
-              />
+              />}
             </Stack>
           </Col>
         </Row>
