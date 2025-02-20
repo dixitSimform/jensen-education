@@ -6,7 +6,7 @@ export const Navigation = () => {
     `link ${isActive ? "text-secondary" : "text-white text-decoration-none"}`;
 
   return (
-    <nav className="w-100 flex-shrink-0 bg-primary p-4 navigation">
+    <nav className="w-100 flex-shrink-0 bg-primary p-4 navigation d-none d-xl-block">
       <Stack className="px-2 py-3" gap={3}>
         <div className="text-uppercase text-white fw-semibold ls-3 mb-4">
           Helsingborg

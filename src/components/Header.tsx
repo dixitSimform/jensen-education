@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export const Header = ({ title }: HeaderProps) => {
   return (
-    <header className="px-4 py-4 border-bottom mb-3">
+    <header className="p-md-4 p-3 border-bottom mb-3">
       <Stack gap={2} direction="horizontal" className="py-1">
         <h1 className="h4 text-uppercase mb-0 me-auto">{title}</h1>
         <Dropdown>
@@ -26,8 +26,9 @@ export const Header = ({ title }: HeaderProps) => {
             <ChevronDown width="14" height="14" />
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
+            <Dropdown.Item href="/">Persons</Dropdown.Item>
+            <Dropdown.Item href="/courses">Courses</Dropdown.Item>
+            <Dropdown.Item href="/styleguide">Styleguide</Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
           </Dropdown.Menu>
