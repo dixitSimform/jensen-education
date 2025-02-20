@@ -7,6 +7,8 @@ import { Filter } from "../components/Filter";
 import { ChevronDown } from "../icons/ChevronDown";
 import { PageNumbers } from "../components/PageNumbers";
 import usePagination from "../hooks/use-pagination";
+import { NoData } from "../components/NoData";
+import { Loader } from "../components/Loader";
 
 export const Persons = () => {
   const {
@@ -18,17 +20,23 @@ export const Persons = () => {
     handleSearchChange,
     usersToShow,
     handleSelect,
+    searchTerm,
+    loading,
   } = usePagination();
+  const breadCrumb = [{ label: "Persons" }];
+  if (searchTerm) {
+    breadCrumb.push({ label: `Search "${searchTerm}"` });
+  }
   return (
     <>
       <Header title="Persons" />
       <Stack className="px-4">
         <Row>
           <Col lg="9" xs="12">
-            <Breadcrumbs />
+            <Breadcrumbs items={breadCrumb} />
             <Searchbar onSearch={handleSearchChange} />
             <Stack gap={2}>
-              {currentPageData.map((person) => {
+              {!loading && currentPageData.map((person) => {
                 return (
                   <PersonCard
                     key={person.email}
@@ -40,6 +48,12 @@ export const Persons = () => {
                   />
                 );
               })}
+              {currentPageData.length === 0 && <NoData />}
+              {loading && (
+                <div className="d-flex justify-content-center">
+                  <Loader />
+                </div>
+              )}
             </Stack>
             <Stack className="my-3 border-top border-light-subtle pt-3 flex-md-row align-items-center justify-content-between">
               <Dropdown onSelect={handleSelect}>

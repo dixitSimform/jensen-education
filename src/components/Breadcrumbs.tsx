@@ -1,23 +1,36 @@
 import { Breadcrumb } from "react-bootstrap";
 import { Home } from "../icons/Home";
 
-export const Breadcrumbs = () => {
+interface BreadcrumbItem {
+  label: string;
+  link?: string;
+}
+
+interface BreadcrumbsProps {
+  items: BreadcrumbItem[];
+}
+
+export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
   return (
-    <Breadcrumb
-      className="mb-3"
-      bsPrefix="breadcrumb align-items-center fw-medium"
-    >
+    <Breadcrumb className="mb-3" bsPrefix="breadcrumb align-items-center fw-medium">
       <Breadcrumb.Item href="#" className="p-1 lh-1">
         <Home />
       </Breadcrumb.Item>
-      <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-        Persons
-      </Breadcrumb.Item>
-      <Breadcrumb.Item active>
-        <span className="py-1 px-2 fw-semibold rounded-1">
-          Search “John Smith”
-        </span>
-      </Breadcrumb.Item>
+      {items.map((item, index) => (
+        <Breadcrumb.Item
+          key={index}
+          href={item.link || undefined}
+          active={index === items.length - 1}
+        >
+          {index === items.length - 1 ? (
+            <span className="py-1 px-2 fw-semibold rounded-1">
+              {item.label}
+            </span>
+          ) : (
+            item.label
+          )}
+        </Breadcrumb.Item>
+      ))}
     </Breadcrumb>
   );
 };
