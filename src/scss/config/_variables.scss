@@ -14,6 +14,7 @@ $je-font-tiempos-fine: "Tiempos Fine";
 $je-font-tiempos-headline: "Tiempos Headline";
 $je-font-tiempos-text: "Tiempos Text";
 $je-font-body: $je-font-inter;
+$je-letter-spacing-2: 2px;
 $je-letter-spacing-3: 3px;
 $je-breadcrumb-active: #EBEAE6;
 
@@ -88,7 +89,7 @@ $success: $green;
 $info: $cyan;
 $warning: $yellow;
 $danger: $red;
-$light: $gray-100;
+$light: $je-gray-200;
 $dark: $gray-900;
 // scss-docs-end theme-color-variables
 
@@ -129,6 +130,11 @@ $font-size-xs: $font-size-base * .75;
 $font-size-sm: $font-size-base * .875;
 $font-size-lg: $font-size-base * 1.25;
 
+$line-height-normal: 1;
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
 $h1-font-size: $font-size-base * 7;
 $h2-font-size: $font-size-base * 4;
 $h3-font-size: $font-size-base * 2.875;
@@ -144,11 +150,19 @@ $body-bg: $je-body-bg;
 $btn-font-size: $font-size-sm;
 $btn-font-weight: 500;
 $btn-padding-y: $spacer * .5;
+// $btn-line-height: $line-height-normal;
+$btn-padding-y-lg: $spacer * 1.5;
+$btn-padding-x-lg: $spacer * 2;
+$btn-font-size-lg: $font-size-sm;
+$btn-border-radius-lg: $spacer * 0.125;
 // scss-docs-end btn-variables
 
 // scss-docs-start card-variables
 $card-border-width: 0;
-$card-border-radius: $spacer * 0.125;;
+$card-border-radius: $spacer * 0.125;
+$card-cap-padding-y: $spacer * 1.5;
+$card-cap-padding-x: $spacer * 1.5;
+$card-cap-bg: $white;
 // $card-spacer-x: 24px;
 // $card-spacer-y: 24px;
 $card-bg: $white;
@@ -166,8 +180,8 @@ $border-radius: 0.125rem;
 // scss-docs-end border-radius-variables
 
 // scss-docs-start form-input-variables
-$input-border-radius: var(--#{$prefix}border-radius);
-$input-border-radius-sm: var(--#{$prefix}border-radius-sm);
+$input-padding-y: $spacer * 0.438;
+$input-btn-padding-x: $spacer;
 $input-border-radius-lg: $border-radius;
 $input-font-size-lg: $spacer;
 $input-padding-y-lg: $spacer;
@@ -218,6 +232,25 @@ $dropdown-font-size: $font-size-sm;
 $dropdown-link-hover-bg: $white;
 // scss-docs-end dropdown-variables
 
+// scss-docs-start modal-variables
+$modal-inner-padding: $spacer;
+$modal-content-border-width: 0;
+$modal-content-border-radius: 0;
+$modal-header-border-width: 1px;
+$modal-footer-border-width: 0;
+$modal-inner-padding: 0;
+$modal-header-padding: 0;
+$modal-lg: 766px;
+// scss-docs-end modal-variables
+
+
+// scss-docs-start close-variables
+$btn-close-opacity: 1;
+$btn-close-hover-opacity: .5;
+$btn-close-focus-opacity: 1;
+// scss-docs-end close-variables
+
+
 // Utilities
 $utilities: ();
 
@@ -227,7 +260,15 @@ $utilities: map-merge(
       property: letter-spacing,
       class: ls,
       values: (
+        2: $je-letter-spacing-2,
         3: $je-letter-spacing-3,
+      ),
+    ),
+    'border-bottom-style': (
+      property: border-bottom-style,
+      class: border-b-style,
+      values: (
+        dashed: dashed,
       ),
     ),
     'width': (
@@ -254,12 +295,22 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
+    "font-family": (
+      property: font-family,
+      class: font,
+      values: (
+        monospace: var(--#{$prefix}font-monospace),
+        tiempos-fine: $je-font-tiempos-fine,
+        tiempos-text: $je-font-tiempos-text,
+      )
+    ),
     "text-size": (
       property: font-size,
       class: text,
       values: (
         xs: $font-size-xs,
-        sm: $font-size-sm
+        sm: $font-size-sm,
+        lg: $spacer * 1.125
       )
     ),
     "shadow": (
