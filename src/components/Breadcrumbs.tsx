@@ -12,7 +12,10 @@ interface BreadcrumbsProps {
 
 export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
   return (
-    <Breadcrumb className="mb-3" bsPrefix="breadcrumb align-items-center fw-medium">
+    <Breadcrumb
+      className="mb-3"
+      bsPrefix="breadcrumb align-items-center fw-medium mb-0"
+    >
       <Breadcrumb.Item href="#" className="p-1 lh-1">
         <Home />
       </Breadcrumb.Item>

@@ -5,3 +5,10 @@
 .form-control {
     font-family: $je-font-tiempos-text;
 }
+
+.form-label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    letter-spacing: $je-letter-spacing-2;
+    line-height: $line-height-sm;
+}

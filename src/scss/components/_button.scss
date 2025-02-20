@@ -31,3 +31,9 @@
         @extend %toggle-checkbox-state;
     }
 }
+
+.btn-icon {
+    padding: $spacer * 0;
+    min-width: 40px;
+    min-height: 40px;
+}

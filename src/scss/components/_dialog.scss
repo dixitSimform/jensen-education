@@ -1,0 +1,12 @@
+//
+// Dialog
+//
+.modal {
+    &-header {
+        .btn-close {
+            position: absolute;
+            top: $spacer * 0.625;
+            right: $spacer * 0.625;
+        }
+    }
+}
