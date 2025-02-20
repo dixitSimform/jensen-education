@@ -6,7 +6,7 @@ import { Searchbar } from "../components/Searchbar";
 import { Filter } from "../components/Filter";
 import { ChevronDown } from "../icons/ChevronDown";
 import { PageNumbers } from "../components/PageNumbers";
-import usePagination from "../hooks/use-pagination";
+import usePagination from "../hooks/use-pagination-with-filter";
 import { NoData } from "../components/NoData";
 import { Loader } from "../components/Loader";
 
@@ -36,19 +36,20 @@ export const Persons = () => {
             <Breadcrumbs items={breadCrumb} />
             <Searchbar onSearch={handleSearchChange} />
             <Stack gap={2}>
-              {!loading && currentPageData.map((person) => {
-                return (
-                  <PersonCard
-                    key={person.email}
-                    image={"/images/person.jpg"}
-                    name={person.firstName + " " + person.lastName}
-                    number={person.phone}
-                    email={person.email}
-                    department={person.department}
-                  />
-                );
-              })}
-              {currentPageData.length === 0 && <NoData />}
+              {!loading &&
+                currentPageData.map((person) => {
+                  return (
+                    <PersonCard
+                      key={person.email}
+                      image={"/images/person.jpg"}
+                      name={person.firstName + " " + person.lastName}
+                      number={person.phone}
+                      email={person.email}
+                      department={person.department}
+                    />
+                  );
+                })}
+              {!loading && currentPageData.length === 0 && <NoData />}
               {loading && (
                 <div className="d-flex justify-content-center">
                   <Loader />
