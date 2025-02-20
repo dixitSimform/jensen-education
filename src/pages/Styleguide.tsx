@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   Button,
   Dropdown,
@@ -13,7 +14,7 @@ import { NoData } from "../components/NoData";
 
 export const Styleguide = () => {
   const [value, setValue] = useState([]);
-  const handleChange = (val) => setValue(val);
+  const handleChange = (val:any) => setValue(val);
 
   return (
     <>
