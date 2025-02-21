@@ -2,6 +2,11 @@
 // Button
 //
 
+.btn {
+    text-transform: uppercase;
+    letter-spacing: $je-letter-spacing-3;
+}
+
 %toggle-checkbox-state {
     color: $primary;
     background-color: $white;
@@ -14,6 +19,8 @@
     font-weight: $font-weight-normal;
     background-color: rgba($je-gray-400, 0.05);
     border: none;
+    text-transform: none;
+    letter-spacing: normal;
 
     @at-root .btn-group>.btn:not(:last-child):not(.dropdown-toggle), .btn-group>.btn:nth-child(n+3) {
         border-radius: $border-radius-xxl;

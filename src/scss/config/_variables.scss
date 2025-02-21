@@ -148,9 +148,9 @@ $body-bg: $je-body-bg;
 
 // scss-docs-start btn-variables
 $btn-font-size: $font-size-sm;
-$btn-font-weight: 500;
-$btn-padding-y: $spacer * .5;
-// $btn-line-height: $line-height-normal;
+$btn-font-weight: 700;
+$btn-padding-y: $spacer * 0.75;
+$btn-line-height: $line-height-normal;
 $btn-padding-y-lg: $spacer * 1.5;
 $btn-padding-x-lg: $spacer * 2;
 $btn-font-size-lg: $font-size-sm;
@@ -240,6 +240,7 @@ $modal-header-border-width: 1px;
 $modal-footer-border-width: 0;
 $modal-inner-padding: 0;
 $modal-header-padding: 0;
+$modal-sm: 500px;
 $modal-lg: 766px;
 // scss-docs-end modal-variables
 

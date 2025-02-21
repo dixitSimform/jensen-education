@@ -11,10 +11,11 @@ import { ChevronDown } from "../icons/ChevronDown";
 import { useState } from "react";
 import { Loader } from "../components/common/Loader";
 import { NoData } from "../components/common/NoData";
+import { Plus } from "../icons/Plus";
 
 export const Styleguide = () => {
   const [value, setValue] = useState([]);
-  const handleChange = (val:any) => setValue(val);
+  const handleChange = (val: any) => setValue(val);
 
   return (
     <>
@@ -26,7 +27,7 @@ export const Styleguide = () => {
         <h4>h4. heading</h4>
         <h5>h5. heading</h5>
         <h6>h6. heading</h6>
-        <Stack gap={3} direction="horizontal">
+        <Stack gap={3} direction="horizontal" className="flex-wrap">
           <Button variant="primary">Primary</Button>
           <Button variant="secondary">Secondary</Button>
           <Button variant="success">Success</Button>
@@ -36,8 +37,12 @@ export const Styleguide = () => {
           <Button variant="light">Light</Button>
           <Button variant="dark">Dark</Button>
           <Button variant="link">Link</Button>
+          <Button variant="outline-primary">
+            <Plus className="me-2" />
+            New Version
+          </Button>
         </Stack>
-        <Stack gap={3} direction="horizontal">
+        <Stack gap={3} direction="horizontal" className="flex-wrap">
           <Button variant="outline-primary">Primary</Button>
           <Button variant="outline-secondary">Secondary</Button>
           <Button variant="outline-success">Success</Button>
