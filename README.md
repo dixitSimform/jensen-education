@@ -1,50 +1,104 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Jensen Education - React + TypeScript + Vite
 
-Currently, two official plugins are available:
+This project is a **React** application built with **TypeScript** and **Vite**. It provides a minimal setup for fast development with features like Hot Module Replacement (HMR) and ESLint for code quality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+-   **React**: A component-based UI library for building user interfaces.
+-   **TypeScript**: A superset of JavaScript that adds static types, providing type safety and better developer tooling.
+-   **Vite**: A fast build tool that optimizes the development and production builds, supporting HMR out of the box.
+-   **React Bootstrap**: Bootstrap components for React to build responsive UIs quickly.
+-   **Storybook**: A tool for developing UI components in isolation.
+-   **React Hook Form**: A library for handling forms in React with minimal re-renders and improved performance.
+-   **Yup**: A schema validation library for validating form data.
+-   **Sass**: A CSS preprocessor for more maintainable stylesheets.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Project Setup
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+-   Node.js (version 16 or higher)
+-   npm or yarn
+
+### Installation
+
+1.  Clone the repository:
+
+```bash
+git clone https://github.com/your-repository/jensen-education.git
+cd jensen-education
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2.  Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
+# or if you're using yarn
+yarn install
 ```
+
+### Scripts
+
+-   **dev**: Runs the development server using Vite (Hot Module Replacement enabled).
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+-   **build**: Builds the production version of the app.
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+-   **lint**: Runs ESLint to check for code quality and adherence to standards.
+
+```bash
+npm run lint
+# or
+yarn lint
+```
+
+-   **preview**: Previews the production build of the app.
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+-   **storybook**: Runs Storybook for developing and testing UI components.
+
+```bash
+npm run storybook
+# or
+yarn storybook
+```
+
+-   **build-storybook**: Builds the Storybook static files for deployment.
+
+```bash
+npm run build-storybook
+# or
+yarn build-storybook
+```
+
+## Linting
+
+The project is set up with **ESLint** to ensure consistent coding practices. You can run the lint script to check for errors in your code.
+
+### ESLint Configuration
+
+The project uses the **`plugin:storybook/recommended`** configuration for Storybook development, ensuring best practices are followed while building components.
+
+## Folder Structure
+
+-   **src**: Contains all the source code for the app, including components, hooks, and pages.
+-   **storybook**: Contains Storybook configuration and stories for developing UI components.
+-   **public**: Static assets like images and favicon.
+
