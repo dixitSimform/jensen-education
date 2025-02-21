@@ -1,7 +1,6 @@
 import { Button, Stack } from "react-bootstrap";
 import { Header } from "../components/Header";
 import { Breadcrumbs } from "../components/Breadcrumbs";
-import { CourseToolbar } from "../components/CourseToolbar";
 import { CourseList } from "../components/CourseList";
 
 export const Courses = () => {
@@ -11,7 +10,6 @@ export const Courses = () => {
       <Header title="Courses" />
       <Stack className="px-md-4 px-3 mb-4">
         <Breadcrumbs items={breadCrumb} />
-        <CourseToolbar />
         <CourseList />
         <Stack
           direction="horizontal"
