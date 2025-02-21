@@ -1,5 +1,5 @@
 import { Breadcrumb } from "react-bootstrap";
-import { Home } from "../../icons/Home";
+import { Home } from "../icons/Home";
 import { BreadcrumbsProps } from "../../types/common";
 
 export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
@@ -8,7 +8,12 @@ export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
       className="mb-3"
       bsPrefix="breadcrumb align-items-center fw-medium mb-0"
     >
-      <Breadcrumb.Item href="#" className="p-1 lh-1">
+      <Breadcrumb.Item
+        href="/"
+        className="p-1 lh-1"
+        aria-label="Navigate to home"
+        title="Home"
+      >
         <Home />
       </Breadcrumb.Item>
       {items.map((item, index) => (

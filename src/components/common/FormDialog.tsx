@@ -1,6 +1,6 @@
 // Dialog.tsx
 import { Button, Modal, Stack } from "react-bootstrap";
-import { ArrowRight } from "../../icons/ArrowRight";
+import { ArrowRight } from "../icons/ArrowRight";
 import { DialogProps } from "../../types/common";
 
 export const FormDialog = ({

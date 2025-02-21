@@ -11,7 +11,7 @@ export const Navigation = () => {
         <div className="text-uppercase text-white fw-semibold ls-3 mb-4">
           Helsingborg
         </div>
-        <Stack gap={3}>
+        <Stack gap={3} className="font-tiempos-text">
           <NavLink className={getLinkClass} to="/">
             Persons
           </NavLink>
