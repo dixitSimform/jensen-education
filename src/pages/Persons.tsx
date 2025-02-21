@@ -4,7 +4,7 @@ import { Header } from "../components/common/Header";
 import { PersonCard } from "../components/persons/PersonCard";
 import { Searchbar } from "../components/common/Searchbar";
 import { Filter } from "../components/persons/Filter";
-import { ChevronDown } from "../icons/ChevronDown";
+import { ChevronDown } from "../components/icons/ChevronDown";
 import { PageNumbers } from "../components/common/PageNumbers";
 import usePagination from "../hooks/use-pagination-with-filter";
 import { NoData } from "../components/common/NoData";

@@ -7,8 +7,8 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
-import { Edit } from "../../icons/Edit";
-import { Trash } from "../../icons/Trash";
+import { Edit } from "../icons/Edit";
+import { Trash } from "../icons/Trash";
 import { RequirementCardProps } from "../../types/courses";
 
 export const RequirementCard: React.FC<RequirementCardProps> = ({
