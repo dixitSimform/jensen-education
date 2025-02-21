@@ -83,6 +83,8 @@ export const RequirementForm = ({
         }
       );
       reset(); // Optionally reset the form after submission
+      setSelectedRequirement(undefined); // Clear selectedRequirement
+      setSelectedAbility(undefined); // Clear selectedAbility
       setRequirementModal(false); // Close the modal after submission
       return;
     }

@@ -57,6 +57,8 @@ export const AbilityForm = ({
         abilityDescription: data.abilityDescription,
       });
       reset(); // Reset form to default values or specify values here
+      setSelectedAbility(undefined); // Clear selectedAbility
+      setSelectedRequirement(undefined); // Clear selectedRequirement
       setAbilityModal(false);
       return;
     }
