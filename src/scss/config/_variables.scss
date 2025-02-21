@@ -55,7 +55,7 @@ $blue: #0d6efd;
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #d63384;
-$red: tomato;
+$red: #742a2a;
 $orange: #fd7e14;
 $yellow: #ffc107;
 $green: #198754;
@@ -151,7 +151,7 @@ $btn-font-size: $font-size-sm;
 $btn-font-weight: 700;
 $btn-padding-y: $spacer * 0.75;
 $btn-line-height: $line-height-normal;
-$btn-padding-y-lg: $spacer * 1.5;
+$btn-padding-y-lg: $spacer * 1.625;
 $btn-padding-x-lg: $spacer * 2;
 $btn-font-size-lg: $font-size-sm;
 $btn-border-radius-lg: $spacer * 0.125;
@@ -240,7 +240,7 @@ $modal-header-border-width: 1px;
 $modal-footer-border-width: 0;
 $modal-inner-padding: 0;
 $modal-header-padding: 0;
-$modal-sm: 500px;
+$modal-sm: 540px;
 $modal-lg: 766px;
 // scss-docs-end modal-variables
 
@@ -263,6 +263,7 @@ $utilities: map-merge(
       values: (
         2: $je-letter-spacing-2,
         3: $je-letter-spacing-3,
+        normal: normal
       ),
     ),
     'border-bottom-style': (
@@ -324,6 +325,11 @@ $utilities: map-merge(
         card: $card-box-shadow,
         none: none,
       )
+    ),
+    "text-transform": (
+      property: text-transform,
+      class: text,
+      values: lowercase uppercase capitalize none
     ),
   ),
   $utilities

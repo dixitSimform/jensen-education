@@ -32,7 +32,7 @@ export const Persons = () => {
       <Header title="Persons" />
       <Stack className="px-md-4 px-3">
         <Row>
-          <Col lg="3" xs="12" className="order-lg-1 mb-lg-0 mb-4">
+          <Col lg="3" xs="12" className="order-lg-1 mb-4">
             <Filter onFilterChange={setFilter} />
           </Col>
           <Col lg="9" xs="12">
@@ -54,7 +54,7 @@ export const Persons = () => {
                 })}
               {!loading && currentPageData.length === 0 && <NoData />}
               {loading && (
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center py-5">
                   <Loader />
                 </div>
               )}
@@ -62,7 +62,10 @@ export const Persons = () => {
             <Stack className="my-3 gap-3 border-top border-light-subtle pt-3 flex-md-row align-items-center justify-content-between">
               {currentPageData.length !== 0 && (
                 <Dropdown onSelect={handleSelect}>
-                  <Dropdown.Toggle bsPrefix="none" variant="outline-primary">
+                  <Dropdown.Toggle
+                    bsPrefix="none"
+                    variant="outline-primary ls-normal fw-medium text-none"
+                  >
                     Show {usersToShow} users
                     <ChevronDown className="ms-3" />
                   </Dropdown.Toggle>

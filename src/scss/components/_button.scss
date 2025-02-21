@@ -14,7 +14,7 @@
 }
 
 .btn-toggle-checkbox {
-    padding: $spacer * 0.5 $spacer * 1.5;
+    padding: $spacer * 0.75 $spacer * 1.5;
     font-size: $font-size-xs;
     font-weight: $font-weight-normal;
     background-color: rgba($je-gray-400, 0.05);
@@ -43,4 +43,30 @@
     padding: $spacer * 0;
     min-width: 40px;
     min-height: 40px;
+}
+
+@each $name, $background, $color in $theme-colors-rgb {
+    .btn-#{$name} {
+        @if #{$name}=="secondary" {
+            color: $white;
+        }
+        &:hover {
+            @if #{$name}=="secondary" {
+                background-color: $primary;
+                border-color: $primary;
+                color: $white;
+            }
+        }
+    }
+}
+
+@each $name, $background, $color in $theme-colors-rgb {
+    .btn-outline-#{$name} {
+
+        &:hover {
+            @if #{$name}=="secondary" {
+                color: $white;
+            }
+        }
+    }
 }

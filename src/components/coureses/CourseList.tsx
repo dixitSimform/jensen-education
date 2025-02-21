@@ -122,7 +122,7 @@ export const CourseList = () => {
           setSelectedAbility(undefined);
           setDeleteAbilityModal(false);
         }}
-        size="md"
+        size="sm"
         title="Delete Ability"
         buttonText="Yes, Delete Ability"
         onSubmit={() => {
@@ -142,7 +142,7 @@ export const CourseList = () => {
         }}
         title="Delete Requirement"
         buttonText="Yes, Delete Requirement"
-        size="md"
+        size="sm"
         onSubmit={() => {
           deleteRequirement(
             selectedAbility?.id as string,

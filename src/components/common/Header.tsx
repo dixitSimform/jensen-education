@@ -23,7 +23,7 @@ export const Header = ({ title }: HeaderProps) => {
                 className="w-100 h-100 object-fit-cover rounded-circle"
               />
             </div>
-            <ChevronDown width="14" height="14" />
+            <ChevronDown width="12" height="7" />
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item href="/">Persons</Dropdown.Item>
