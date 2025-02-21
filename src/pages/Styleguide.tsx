@@ -10,12 +10,13 @@ import {
   ToggleButtonGroup,
 } from "react-bootstrap";
 import { Header } from "../components/common/Header";
-import { ChevronDown } from "../icons/ChevronDown";
+import { ChevronDown } from "../components/icons/ChevronDown";
 import { useState } from "react";
 import { Loader } from "../components/common/Loader";
 import { NoData } from "../components/common/NoData";
-import { Plus } from "../icons/Plus";
+import { Plus } from "../components/icons/Plus";
 import { PersonCard } from "../components/persons/PersonCard";
+import { ArrowRight } from "../components/icons/ArrowRight";
 
 export const Styleguide = () => {
   const [value, setValue] = useState([]);
@@ -48,37 +49,24 @@ export const Styleguide = () => {
           <div className="border-top pb-1 mt-1 w-100"></div>
         </Stack>
         <Stack gap={3} direction="horizontal" className="flex-wrap">
-          <Button variant="primary">Primary</Button>
-          <Button variant="secondary">Secondary</Button>
-          <Button variant="success">Success</Button>
-          <Button variant="warning">Warning</Button>
-          <Button variant="danger">Danger</Button>
-          <Button variant="info">Info</Button>
-          <Button variant="light">Light</Button>
-          <Button variant="dark">Dark</Button>
-          <Button variant="link">Link</Button>
-        </Stack>
-        <Stack
-          className="align-items-center mt-4"
-          direction="horizontal"
-          gap={3}
-        >
-          <div className="fw-bold text-uppercase flex-shrink-0 text-sm ls-2">
-            Outline Buttons
-          </div>
-          <div className="border-top pb-1 mt-1 w-100"></div>
+          <Button variant="outline-primary">
+            <Plus className="me-2 align-bottom" />
+            Gör testet nu
+          </Button>
+          <Button variant="secondary">
+            <Plus className="me-2 align-bottom" />
+            Gör testet nu
+          </Button>
         </Stack>
         <Stack gap={3} direction="horizontal" className="flex-wrap">
-          <Button variant="outline-primary">
-            <Plus className="me-2 align-bottom" /> Primary
+          <Button variant="outline-primary" size="lg">
+            Gör testet nu
+            <ArrowRight className="ms-2 align-bottom" />
           </Button>
-          <Button variant="outline-secondary">Secondary</Button>
-          <Button variant="outline-success">Success</Button>
-          <Button variant="outline-warning">Warning</Button>
-          <Button variant="outline-danger">Danger</Button>
-          <Button variant="outline-info">Info</Button>
-          <Button variant="outline-light">Light</Button>
-          <Button variant="outline-dark">Dark</Button>
+          <Button variant="secondary" size="lg">
+            Gör testet nu
+            <ArrowRight className="ms-2 align-bottom" />
+          </Button>
         </Stack>
         <Stack
           className="align-items-center mt-4"

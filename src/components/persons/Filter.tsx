@@ -60,7 +60,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
         className="border-bottom pb-3 pt-1 justify-content-between"
         direction="horizontal"
       >
-        <h3 className="h5 text-uppercase mb-0">Filter</h3>
+        <h2 className="h5 text-uppercase mb-0">Filter</h2>
         <Button
           className="border-0 px-1 px-2 text-xs ls-normal"
           variant="outline-primary"
@@ -72,7 +72,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
 
       {/* Role */}
       <Stack gap={2}>
-        <h4 className="h6 mb-1">Role</h4>
+        <h3 className="h6 mb-1">Role</h3>
         <ToggleButtonGroup
           type="checkbox"
           value={role}
@@ -96,7 +96,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
 
       {/* Unit */}
       <Stack gap={2}>
-        <h4 className="h6 mb-1">Unit</h4>
+        <h3 className="h6 mb-1">Unit</h3>
         <ToggleButtonGroup
           type="checkbox"
           value={unit}
@@ -120,7 +120,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
 
       {/* Class */}
       <Stack gap={2}>
-        <h4 className="h6 mb-1">Class</h4>
+        <h3 className="h6 mb-1">Class</h3>
         <ToggleButtonGroup
           type="checkbox"
           value={cls}
@@ -144,7 +144,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
 
       {/* Department */}
       <Stack gap={2}>
-        <h4 className="h6 mb-1">Department</h4>
+        <h3 className="h6 mb-1">Department</h3>
         <ToggleButtonGroup
           type="checkbox"
           value={department}

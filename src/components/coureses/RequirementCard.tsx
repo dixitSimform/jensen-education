@@ -7,8 +7,8 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
-import { Edit } from "../../icons/Edit";
-import { Trash } from "../../icons/Trash";
+import { Edit } from "../icons/Edit";
+import { Trash } from "../icons/Trash";
 import { RequirementCardProps } from "../../types/courses";
 
 export const RequirementCard: React.FC<RequirementCardProps> = ({
@@ -37,6 +37,7 @@ export const RequirementCard: React.FC<RequirementCardProps> = ({
               variant="outline-primary"
               className="btn-icon border-light"
               onClick={onEdit}
+              aria-label="Edit Requirement"
             >
               <Edit />
             </Button>
@@ -49,6 +50,7 @@ export const RequirementCard: React.FC<RequirementCardProps> = ({
               variant="outline-primary"
               className="btn-icon border-light"
               onClick={onDelete}
+              aria-label="Delete Requirement"
             >
               <Trash />
             </Button>
@@ -58,20 +60,20 @@ export const RequirementCard: React.FC<RequirementCardProps> = ({
     </Stack>
     <Row className="gap-md-0 gap-3">
       <Col md="4" xs="12">
-        <Stack gap={2} className="border border-primary rounded p-3">
-          <h6 className="mb-0">Grade E</h6>
+        <Stack gap={2} className="border border-primary rounded p-3 h-100">
+          <h5 className="mb-0 h6">Grade E</h5>
           <p className="text-sm font-tiempos-text">{requirement.gradeE}</p>
         </Stack>
       </Col>
       <Col md="4" xs="12">
-        <Stack gap={2} className="border border-primary rounded p-3">
-          <h6 className="mb-0">Grade C</h6>
+        <Stack gap={2} className="border border-primary rounded p-3 h-100">
+          <h5 className="mb-0 h6">Grade C</h5>
           <p className="text-sm font-tiempos-text">{requirement.gradeC}</p>
         </Stack>
       </Col>
       <Col md="4" xs="12">
-        <Stack gap={2} className="border border-primary rounded p-3">
-          <h6 className="mb-0">Grade A</h6>
+        <Stack gap={2} className="border border-primary rounded p-3 h-100">
+          <h5 className="mb-0 h6">Grade A</h5>
           <p className="text-sm font-tiempos-text">{requirement.gradeA}</p>
         </Stack>
       </Col>

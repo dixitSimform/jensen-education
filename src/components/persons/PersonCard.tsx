@@ -21,7 +21,7 @@ export const PersonCard = (props: TPersonCard) => {
         />
       </div>
       <Card.Body className="person-card-content d-flex flex-column justify-content-center gap-md-3 gap-2">
-        <h2 className="mb-0 h5">{name}</h2>
+        <h4 className="mb-0 h5">{name}</h4>
         <div className="d-flex gap-md-2 gap-1 flex-wrap">
           <Badge
             pill
