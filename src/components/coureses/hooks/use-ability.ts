@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Ability, Requirement } from "../../../types/courses";
+import { dummyAbility } from "../../../constants/dummy";
 
 const useAbilities = () => {
-  const [abilities, setAbilities] = useState<Ability[]>([]);
+  const [abilities, setAbilities] = useState<Ability[]>(dummyAbility);
   const [abilityModal, setAbilityModal] = useState(false);
   const [requirementModal, setRequirementModal] = useState(false);
   const [modalDeleteAbilityOpen, setDeleteAbilityModal] = useState(false);
