@@ -1,6 +1,6 @@
 import { Button, Form, Stack } from "react-bootstrap";
-import { Plus } from "../icons/Plus";
-import { Upload } from "../icons/Upload";
+import { Plus } from "../../icons/Plus";
+import { Upload } from "../../icons/Upload";
 import React from "react";
 
 export const CourseToolbar =({

@@ -6,11 +6,11 @@ import {
   ToggleButton,
   ToggleButtonGroup,
 } from "react-bootstrap";
-import { Header } from "../components/Header";
+import { Header } from "../components/common/Header";
 import { ChevronDown } from "../icons/ChevronDown";
 import { useState } from "react";
-import { Loader } from "../components/Loader";
-import { NoData } from "../components/NoData";
+import { Loader } from "../components/common/Loader";
+import { NoData } from "../components/common/NoData";
 
 export const Styleguide = () => {
   const [value, setValue] = useState([]);

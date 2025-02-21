@@ -1,10 +1,8 @@
 import { Stack } from "react-bootstrap";
-import { NoDataFound } from "../icons/NoDataFound";
+import { NoDataFound } from "../../icons/NoDataFound";
+import { NoDataProps } from "../../types/common";
 
-interface NoDataProps {
-  title?: string;
-  description?: string;
-}
+
 
 export const NoData = ({ title, description }: NoDataProps) => {
   const titleText = title || "No Data Found";

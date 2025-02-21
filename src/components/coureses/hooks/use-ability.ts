@@ -1,20 +1,5 @@
 import { useState } from "react";
-
-export interface Requirement {
-  requirementTitle: string;
-  requirementDescription: string;
-  requirementId: string;
-  gradeE: string;
-  gradeC: string;
-  gradeA: string;
-}
-
-export interface Ability {
-  abilityTitle: string;
-  abilityDescription: string;
-  id: string;
-  requirements: Requirement[];
-}
+import { Ability, Requirement } from "../../../types/courses";
 
 const useAbilities = () => {
   const [abilities, setAbilities] = useState<Ability[]>([]);

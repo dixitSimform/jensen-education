@@ -1,14 +1,14 @@
 import { Col, Dropdown, Row, Stack } from "react-bootstrap";
-import { Breadcrumbs } from "../components/Breadcrumbs";
-import { Header } from "../components/Header";
-import { PersonCard } from "../components/PersonCard";
-import { Searchbar } from "../components/Searchbar";
-import { Filter } from "../components/Filter";
+import { Breadcrumbs } from "../components/common/Breadcrumbs";
+import { Header } from "../components/common/Header";
+import { PersonCard } from "../components/persons/PersonCard";
+import { Searchbar } from "../components/common/Searchbar";
+import { Filter } from "../components/persons/Filter";
 import { ChevronDown } from "../icons/ChevronDown";
-import { PageNumbers } from "../components/PageNumbers";
+import { PageNumbers } from "../components/common/PageNumbers";
 import usePagination from "../hooks/use-pagination-with-filter";
-import { NoData } from "../components/NoData";
-import { Loader } from "../components/Loader";
+import { NoData } from "../components/common/NoData";
+import { Loader } from "../components/common/Loader";
 
 export const Persons = () => {
   const {

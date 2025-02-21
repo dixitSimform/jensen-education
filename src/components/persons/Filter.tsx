@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Stack, ToggleButton, ToggleButtonGroup } from "react-bootstrap";
-import { ROLES, UNITS, CLASSES, DEPARTMENTS } from "../constants/filters"; // Import constants
+import { ROLES, UNITS, CLASSES, DEPARTMENTS } from "../../constants/filters"; // Import constants
 
 interface FilterProps {
   onFilterChange: (filterName: string, value: string[]) => void;

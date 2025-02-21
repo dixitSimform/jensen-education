@@ -1,10 +1,10 @@
 import { Form } from "react-bootstrap";
-import { FormDialog } from "./FormDialog";
+import { FormDialog } from "../common/FormDialog";
 import React, { useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Ability, Requirement } from "../hooks/use-ability";
+import { RequirementFormProps } from "../../types/courses";
 
 // Define the validation schema with yup
 const schema = yup.object().shape({
@@ -29,24 +29,7 @@ export const RequirementForm = ({
   selectedAbility,
   setSelectedAbility,
   setSelectedRequirement,
-}: {
-  requirementModal: boolean;
-  setRequirementModal: React.Dispatch<React.SetStateAction<boolean>>;
-  addRequirementToAbility: (
-    abilityId: string,
-    requirement: Omit<Requirement, "requirementId">
-  ) => void;
-  selectedRequirement?: Requirement;
-  selectedAbility?: Ability;
-
-  editRequirement: (
-    abilityId: string,
-    requirementId: string,
-    updatedData: Partial<Requirement>
-  ) => void;
-  setSelectedAbility: React.Dispatch<React.SetStateAction<Ability | undefined>>;
-  setSelectedRequirement: React.Dispatch<React.SetStateAction<Requirement | undefined>>;
-}) => {
+}: RequirementFormProps) => {
   // Set up react-hook-form
   const {
     control,

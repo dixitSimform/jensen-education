@@ -1,10 +1,10 @@
 // AbilityCard.tsx
 import { Button, Card, OverlayTrigger, Stack, Tooltip } from "react-bootstrap";
-import { Edit } from "../icons/Edit";
-import { Trash } from "../icons/Trash";
-import { Plus } from "../icons/Plus";
-import { ContextAwareToggle } from "./ContextAwareToggle";
-import { Ability } from "../hooks/use-ability";
+import { Edit } from "../../icons/Edit";
+import { Trash } from "../../icons/Trash";
+import { Plus } from "../../icons/Plus";
+import { ContextAwareToggle } from "../common/ContextAwareToggle";
+import { Ability } from "../../types/courses";
 
 interface AbilityCardProps {
   ability: Ability;

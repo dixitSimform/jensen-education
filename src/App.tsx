@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Persons } from "./pages/Persons";
 import { Courses } from "./pages/Courses";
 import { Styleguide } from "./pages/Styleguide";
-import { Navigation } from "./components/Navigation";
+import { Navigation } from "./components/common/Navigation";
 import { Stack } from "react-bootstrap";
 
 function App() {

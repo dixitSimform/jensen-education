@@ -2,11 +2,11 @@
 import { Accordion, Card } from "react-bootstrap";
 import { AbilityCard } from "./AbilityCard";
 import { RequirementCard } from "./RequirementCard";
-import useAbilities from "../hooks/use-ability";
+import useAbilities from "./hooks/use-ability";
 import { CourseToolbar } from "./CourseToolbar";
 import { AbilityForm } from "./AbilityForm";
 import { RequirementForm } from "./RequirementForm";
-import { FormDialog } from "./FormDialog";
+import { FormDialog } from "../common/FormDialog";
 
 export const CourseList = () => {
   const {

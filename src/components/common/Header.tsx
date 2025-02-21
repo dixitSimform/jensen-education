@@ -1,6 +1,6 @@
 import { Dropdown, Stack } from "react-bootstrap";
-import { ChevronDown } from "../icons/ChevronDown";
-import UserAvatar from "../images/avatar.jpg";
+import { ChevronDown } from "../../icons/ChevronDown";
+import UserAvatar from "../../images/avatar.jpg";
 
 interface HeaderProps {
   title?: string;

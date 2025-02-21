@@ -1,16 +1,9 @@
 // Dialog.tsx
 import { Button, Modal, Stack } from "react-bootstrap";
-import { ArrowRight } from "../icons/ArrowRight";
+import { ArrowRight } from "../../icons/ArrowRight";
+import { DialogProps } from "../../types/common";
 
-interface DialogProps {
-  size?: "sm" | "lg" | "xl";
-  isOpen: boolean;
-  onClose: () => void;
-  title?: string;
-  buttonText?: string;
-  children?: React.ReactNode;
-  onSubmit: () => void; // Added onSubmit function as a prop
-}
+
 
 export const FormDialog = ({
   size = "lg",

@@ -1,7 +1,7 @@
 import { Button, Stack } from "react-bootstrap";
-import { Header } from "../components/Header";
-import { Breadcrumbs } from "../components/Breadcrumbs";
-import { CourseList } from "../components/CourseList";
+import { Header } from "../components/common/Header";
+import { Breadcrumbs } from "../components/common/Breadcrumbs";
+import { CourseList } from "../components/coureses/CourseList";
 
 export const Courses = () => {
   const breadCrumb = [{ label: "Courses" }, { label: "Matrix" }];

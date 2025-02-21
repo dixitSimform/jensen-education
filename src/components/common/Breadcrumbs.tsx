@@ -1,14 +1,6 @@
 import { Breadcrumb } from "react-bootstrap";
-import { Home } from "../icons/Home";
-
-interface BreadcrumbItem {
-  label: string;
-  link?: string;
-}
-
-interface BreadcrumbsProps {
-  items: BreadcrumbItem[];
-}
+import { Home } from "../../icons/Home";
+import { BreadcrumbsProps } from "../../types/common";
 
 export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
   return (

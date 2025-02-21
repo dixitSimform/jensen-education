@@ -1,13 +1,9 @@
 // ContextAwareToggle.tsx
 import { useContext } from "react";
 import { Button, AccordionContext, useAccordionButton } from "react-bootstrap";
-import { ChevronUp } from "../icons/ChevronUp";
-import { ChevronDown } from "../icons/ChevronDown";
-
-interface ContextAwareToggleProps {
-  eventKey: string;
-  callback?: (eventKey: string) => void;
-}
+import { ChevronUp } from "../../icons/ChevronUp";
+import { ChevronDown } from "../../icons/ChevronDown";
+import { ContextAwareToggleProps } from "../../types/common";
 
 export const ContextAwareToggle: React.FC<ContextAwareToggleProps> = ({
   eventKey,

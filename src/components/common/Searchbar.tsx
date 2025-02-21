@@ -1,5 +1,5 @@
 import { Button, Form } from 'react-bootstrap';
-import { Search } from '../icons/Search';
+import { Search } from '../../icons/Search';
 
 interface SearchbarProps {
   onSearch: (query: string) => void;  // Callback to handle search query

@@ -1,11 +1,8 @@
 import React from 'react';
 import { Pagination } from 'react-bootstrap';
+import { PageNumbersProps } from '../../types/common';
 
-interface PageNumbersProps {
-  currentPage: number;
-  pageCount: number;
-  handlePageChange: (page: number) => void;
-}
+
 
 export const PageNumbers: React.FC<PageNumbersProps> = ({
   currentPage,

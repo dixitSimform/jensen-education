@@ -1,10 +1,10 @@
 import { Form } from "react-bootstrap";
-import { FormDialog } from "./FormDialog";
+import { FormDialog } from "../common/FormDialog";
 import React, { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Ability, Requirement } from "../hooks/use-ability";
+import { Ability, Requirement } from "../../types/courses";
 
 // Define validation schema using Yup
 const schema = yup.object().shape({
