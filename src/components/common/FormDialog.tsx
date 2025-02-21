@@ -19,7 +19,7 @@ export const FormDialog = ({
           <Modal.Title className="text-uppercase">{title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>{children}</Modal.Body>
-        <Modal.Footer className="pt-4 mt-md-1">
+        <Modal.Footer className="pt-4">
           <Button
             variant="secondary"
             className="w-100 m-0"
