@@ -24,6 +24,7 @@ export const ContextAwareToggle: React.FC<ContextAwareToggleProps> = ({
       variant="outline-primary"
       className="btn-icon border-light"
       onClick={decoratedOnClick}
+      aria-label={isCurrentEventKey ? "Expand accordion" : "Collapse accordion"}
     >
       {isCurrentEventKey ? <ChevronUp /> : <ChevronDown />}
     </Button>

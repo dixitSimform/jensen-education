@@ -36,6 +36,7 @@ export const AbilityCard: React.FC<AbilityCardProps> = ({
             variant="outline-primary"
             className="btn-icon border-light"
             onClick={onEdit}
+            aria-label="Edit Ability"
           >
             <Edit />
           </Button>
@@ -48,6 +49,7 @@ export const AbilityCard: React.FC<AbilityCardProps> = ({
             variant="outline-primary"
             className="btn-icon border-light"
             onClick={onDelete}
+            aria-label="Delete Ability"
           >
             <Trash />
           </Button>
@@ -60,6 +62,7 @@ export const AbilityCard: React.FC<AbilityCardProps> = ({
             variant="outline-primary"
             className="btn-icon border-light"
             onClick={onAddRequirement}
+            aria-label="Add Requirement"
           >
             <Plus />
           </Button>
