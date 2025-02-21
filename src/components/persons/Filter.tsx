@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { Button, Stack, ToggleButton, ToggleButtonGroup } from "react-bootstrap";
+import {
+  Button,
+  Stack,
+  ToggleButton,
+  ToggleButtonGroup,
+} from "react-bootstrap";
 import { ROLES, UNITS, CLASSES, DEPARTMENTS } from "../../constants/filters"; // Import constants
 
 interface FilterProps {
@@ -57,7 +62,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
       >
         <h3 className="h5 text-uppercase mb-0">Filter</h3>
         <Button
-          className="text-uppercase fw-bold border-0 px-1 px-2 text-xs"
+          className="border-0 px-1 px-2 text-xs ls-normal"
           variant="outline-primary"
           onClick={handleClearAll}
         >

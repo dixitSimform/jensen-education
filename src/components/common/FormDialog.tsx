@@ -3,8 +3,6 @@ import { Button, Modal, Stack } from "react-bootstrap";
 import { ArrowRight } from "../../icons/ArrowRight";
 import { DialogProps } from "../../types/common";
 
-
-
 export const FormDialog = ({
   size = "lg",
   isOpen,
@@ -24,12 +22,12 @@ export const FormDialog = ({
         <Modal.Footer className="pt-4 mt-md-1">
           <Button
             variant="secondary"
-            className="w-100 m-0 text-uppercase fw-bold ls-3 text-white d-flex align-items-center justify-content-center gap-2"
+            className="w-100 m-0"
             size="lg"
             onClick={onSubmit} // Call the onSubmit function when the button is clicked
           >
             {buttonText}
-            <ArrowRight />
+            <ArrowRight className="ms-2 align-bottom" />
           </Button>
         </Modal.Footer>
       </Stack>

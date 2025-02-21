@@ -15,12 +15,8 @@ export const Courses = () => {
           direction="horizontal"
           className="mt-3 gap-3 border-top border-light pt-3 align-items-center justify-content-end"
         >
-          <Button variant="outline-primary text-uppercase ls-3 fw-bold d-flex align-items-center">
-            Cancel
-          </Button>
-          <Button variant="outline-primary text-uppercase ls-3 fw-bold d-flex align-items-center">
-            Apply
-          </Button>
+          <Button variant="outline-primary">Cancel</Button>
+          <Button variant="secondary">Apply</Button>
         </Stack>
       </Stack>
     </>

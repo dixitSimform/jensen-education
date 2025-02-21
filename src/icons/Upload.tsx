@@ -8,14 +8,14 @@ export const Upload = ({ width, height, className }: UploadProps) => {
   return (
     <svg
       className={className || ""}
-      width={width || 20}
-      height={height || 20}
-      viewBox="0 0 20 20"
+      width={width || 15}
+      height={height || 14}
+      viewBox="0 0 15 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M17.5 2.5H2.5M15 10.8333L10 5.83333M10 5.83333L5 10.8333M10 5.83333V17.5"
+        d="M14 1H1M11.8333 7.66667L7.5 3.66667M7.5 3.66667L3.16667 7.66667M7.5 3.66667V13"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
