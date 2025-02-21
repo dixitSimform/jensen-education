@@ -65,10 +65,7 @@ export const RequirementForm = ({
           gradeA: data.gradeA,
         }
       );
-      reset(); // Optionally reset the form after submission
-      setSelectedRequirement(undefined); // Clear selectedRequirement
-      setSelectedAbility(undefined); // Clear selectedAbility
-      setRequirementModal(false); // Close the modal after submission
+      handleClose()
       return;
     }
     addRequirementToAbility(selectedAbility?.id as string, {
@@ -78,8 +75,7 @@ export const RequirementForm = ({
       gradeC: data.gradeC,
       gradeA: data.gradeA,
     });
-    reset(); // Optionally reset the form after submission
-    setRequirementModal(false); // Close the modal after submission
+    handleClose()
   };
   const handleClose = () => {
     setRequirementModal(false);

@@ -56,10 +56,7 @@ export const AbilityForm = ({
         abilityTitle: data.abilityTitle,
         abilityDescription: data.abilityDescription,
       });
-      reset(); // Reset form to default values or specify values here
-      setSelectedAbility(undefined); // Clear selectedAbility
-      setSelectedRequirement(undefined); // Clear selectedRequirement
-      setAbilityModal(false);
+      handleClose()
       return;
     }
     addAbility({
@@ -67,18 +64,14 @@ export const AbilityForm = ({
       abilityDescription: data.abilityDescription,
       requirements: [],
     });
-    // After form submission, reset the form
-    reset(); // Reset form to default values or specify values here
-    setAbilityModal(false); // Close modal after submission
+    handleClose()
   };
 
   const handleClose = () => {
     reset(); // Reset form when modal is closed
     setSelectedAbility(undefined); // Clear selectedAbility
     setSelectedRequirement(undefined); // Clear selectedRequirement
-    setAbilityModal(false);
-
-   
+    setAbilityModal(false);   
   };
 
   return (
